@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Administration - Githumu High School{% endblock %}
+
+{% block content %}
+<section id="news"><h3>Administration</h3></section>
+
+
+<div class="admin-grid">
+    {% for admin in administrators %}
+    <div class="admin-card">
+        <img src="{{ admin.photo.url }}" alt="{{ admin.name }}">
+        <p>{{ admin.title }} {{ admin.name }}</p>
+        <h2></h2>
+        <h2>{{ admin.role }}</h2>
+        
+    </div>
+    {% endfor %}
+</div>  
+{% endblock %}
